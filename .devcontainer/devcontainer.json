@@ -1,6 +1,6 @@
 {
   "name": "Smartbrain Dev",
-  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "latest",
@@ -10,6 +10,9 @@
     "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
       "version": "17"
     }
+  },
+  "postCreateCommand": {
+    "install_global_npm_packages": "npm install -g @devcontainers/cli prettier eslint"
   },
   "containerEnv": {
     "DEVCONTAINER": "true"
