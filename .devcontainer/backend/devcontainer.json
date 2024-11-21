@@ -1,5 +1,6 @@
 {
   "name": "Smartbrain backend",
+  "dockerComposeFile": "../docker-compose.yml",
   "service": "backend",
   "workspaceFolder": "/workspaces/backend",
   "features": {

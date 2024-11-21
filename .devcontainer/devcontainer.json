@@ -2,11 +2,7 @@
   "name": "Smartbrain Dev",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {
-      "version": "latest",
-      "enableNonRootDocker": "true",
-      "moby": "true"
-    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
       "version": "17"
     }
