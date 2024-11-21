@@ -3,6 +3,7 @@ networks:
 
 services:
   frontend:
+    container_name: smartbrain_frontend
     build:
       context: ./frontend/
       dockerfile: Dockerfile
@@ -17,6 +18,7 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
   backend:
+    container_name: smartbrain_backend
     build:
       context: ./backend/
       dockerfile: Dockerfile
@@ -29,6 +31,7 @@ services:
       - smartbrain
 
   backend_db:
+    container_name: smartbrain_db
     build:
       context: ./database/
       dockerfile: Dockerfile

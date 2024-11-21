@@ -1,19 +1,11 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
 {
   "name": "Smartbrain backend",
   "service": "backend",
   "workspaceFolder": "/workspaces/backend",
-
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // This can be used to network with other containers or with the host.
-  "forwardPorts": [5432],
-
-  "shutdownAction": "none",
-
-  // Use 'postCreateCommand' to run commands after the container is created.
+  "features": {
+    "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
+      "version": "17"
+    }
+  },
   "postCreateCommand": "yarn install"
 }
