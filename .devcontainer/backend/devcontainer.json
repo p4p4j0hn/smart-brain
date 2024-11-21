@@ -7,5 +7,6 @@
       "version": "17"
     }
   },
+  "shutdownAction": "none",
   "postCreateCommand": "yarn install"
 }
