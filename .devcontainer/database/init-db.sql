@@ -4,6 +4,8 @@ CREATE DATABASE smartbrain;
 
 GRANT ALL PRIVILEGES ON DATABASE smartbrain TO smartbrain;
 
+USE smartbrain;
+
 CREATE TABLE users (
   id serial PRIMARY KEY,
   name VARCHAR(100),
