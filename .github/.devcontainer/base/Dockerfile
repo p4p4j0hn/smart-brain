@@ -40,9 +40,7 @@ ARG USERNAME=coder
 
 RUN groupadd --gid 1000 $USERNAME \
   && useradd -s /bin/bash --uid 1000 --gid 1000 -m $USERNAME \
-  && if ! [ -d /etc/sudoers.d ]; then \
-  mkdir /etc/sudoers.d \
-  fi \
+  && if ! [ -d /etc/sudoers.d ]; then mkdir /etc/sudoers.d; fi \
   && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
   && chmod 0440 /etc/sudoers.d/$USERNAME
 
