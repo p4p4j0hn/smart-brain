@@ -1,3 +1,16 @@
+.PHONY: dev_init
+dev_init: dev_init_frontend dev_init_backend
+
+.PHONY: dev_init_frontend
+dev_init_frontend:
+	@echo 'Building frontend'
+	@devcontainer up --workspace-folder . --config .devcontainer/frontend/devcontainer.json --dotfiles-repository https://github.com/p4p4j0hn/dotfiles
+
+.PHONY: dev_init_backend
+dev_init_backend:
+	@echo 'Building backend'
+	@devcontainer set-up --workspace-folder . --config .devcontainer/backend/devcontainer.json --container-id smartbrain_backend --dotfiles-repository https://github.com/p4p4j0hn/dotfiles
+
 .PHONY: dev_up_frontend
 dev_up_frontend:
 	@echo 'Starting frontend container'
