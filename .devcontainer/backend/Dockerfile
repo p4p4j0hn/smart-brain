@@ -42,6 +42,6 @@ RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \
 COPY ./scripts/install-postgresql.sh /tmp/
 ARG TARGET_POSTGRESQL_VERSION=17
 RUN /tmp/install-postgresql.sh \
-  && rm /tmp/install-postgresql.sh
+  && rm /tmp/*
 
 USER node
