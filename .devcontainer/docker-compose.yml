@@ -11,7 +11,7 @@ services:
       - ..:/workspaces:z,cached
     environment:
       DEVCONTAINER: true
-      NODE_ENV: development
+      NODE_ENV: local
     command: sleep infinity
     networks:
       - smartbrain
@@ -33,7 +33,7 @@ services:
     command: sleep infinity
     environment:
       DEVCONTAINER: true
-      NODE_ENV: development
+      NODE_ENV: local
     networks:
       - smartbrain
     ports:
