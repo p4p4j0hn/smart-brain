@@ -29,7 +29,7 @@ jobs:
           subFolder: .github
           configFile: .github/.devcontainer/base/devcontainer.json
           imageName: ghcr.io/${{ github.repository }}-base
-          cacheFrom: ghcr.io/${{ github.repository }}
+          cacheFrom: ghcr.io/${{ github.repository }}-base
           push: always
       - name: Pre-build dev container image
         uses: devcontainers/ci@v0.3
@@ -37,5 +37,5 @@ jobs:
           subFolder: .github
           configFile: .github/.devcontainer/dind/devcontainer.json
           imageName: ghcr.io/${{ github.repository }}-dind
-          cacheFrom: ghcr.io/${{ github.repository }}
+          cacheFrom: ghcr.io/${{ github.repository }}-dind
           push: always
