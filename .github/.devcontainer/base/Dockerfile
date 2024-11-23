@@ -26,16 +26,15 @@ RUN apt-get update \
   && apt-get upgrade -y \
   && rm -rf /var/lib/apt/lists/*
 
-# Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
+# Default to bash shell
 ENV SHELL=/bin/bash \
   DOCKER_BUILDKIT=1
 
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts
 
-# Mount for docker-in-docker 
-VOLUME [ "/var/lib/docker" ]
+COPY ./docker-entrypoint.sh /usr/local/share/docker-entrypoint.sh
 
-# Fire Docker/Moby script if needed
-ENTRYPOINT [ "/usr/local/share/docker-init.sh", "/usr/local/share/ssh-init.sh"]
+ENTRYPOINT [ "/usr/local/share/docker-entrypoint.sh" ]
+
 CMD [ "sleep", "infinity" ]
