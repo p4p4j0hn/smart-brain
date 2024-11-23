@@ -8,8 +8,7 @@
       "userGid": "1000"
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "22",
-      "additionalVersions": "20"
+      "version": "22"
     },
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
