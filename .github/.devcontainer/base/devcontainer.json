@@ -1,0 +1,108 @@
+{
+  "name": "Smartbrain Devcontainer",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {
+      "username": "coder",
+      "userUid": "1000",
+      "userGid": "1000"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers-extra/features/prettier": {},
+    "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers-extra/features/starship:1": {},
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+    "ghcr.io/devcontainers-extra/features/npm-package:1": {
+      "package": "@devcontainers/cli"
+    },
+    "ghcr.io/devcontainers-extra/features/npm-package:1": {
+      "package": "eslint"
+    },
+    "ghcr.io/devcontainers-extra/features/neovim-homebrew:1": {},
+    "ghcr.io/devcontainers-extra/features/tmux-homebrew:1": {},
+    "ghcr.io/georgofenbeck/features/lazygit-homebrew:1": {},
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "vcsh"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "myrepos"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "smug"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "luarocks"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "ruby"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "atuin"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "bat"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "direnv"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "dysk"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "eza"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "fd"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "rg"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "shellcheck"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "tealdeer"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "trash-cli"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "eza"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "yq"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "zoxide"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "git-flow"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "glab"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "tea"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "gh"
+    }
+  },
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/node",
+    "ghcr.io/devcontainers-extra/features/prettier",
+    "ghcr.io/robbert229/devcontainer-features/postgresql-client",
+    "ghcr.io/devcontainers-extra/features/starship",
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew"
+  ],
+  "remoteUser": "coder",
+  "containerUser": "coder"
+}

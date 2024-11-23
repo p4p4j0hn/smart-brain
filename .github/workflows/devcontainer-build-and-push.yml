@@ -24,9 +24,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.REGISTRY_TOKEN }}
       - name: Pre-build dev container image
-        uses: devcontainers/ci@v0.2
+        uses: devcontainers/ci@v0.3
         with:
           subFolder: .github
-          imageName: ghcr.io/${{ github.repository }}-dev
+          configFile: .devcontainer/base/devcontainer.json
+          imageName: ghcr.io/${{ github.repository }}-base
+          cacheFrom: ghcr.io/${{ github.repository }}
+          push: always
+      - name: Pre-build dev container image
+        uses: devcontainers/ci@v0.3
+        with:
+          subFolder: .github
+          configFile: .devcontainer/dind/devcontainer.json
+          imageName: ghcr.io/${{ github.repository }}-dind
           cacheFrom: ghcr.io/${{ github.repository }}
           push: always
