@@ -6,9 +6,7 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/common-utils": {
-      "username": "coder",
-      "userUid": "1000",
-      "userGid": "1000"
+      "username": "coder"
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"

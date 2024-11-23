@@ -33,8 +33,17 @@ ENV SHELL=/bin/bash \
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts
 
-COPY ./docker-entrypoint.sh /usr/local/share/docker-entrypoint.sh
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
-ENTRYPOINT [ "/usr/local/share/docker-entrypoint.sh" ]
+ARG USERNAME=coder
+
+RUN groupadd --gid 1000 $USERNAME \
+  && useradd -s /bin/bash --uid 1000 --gid 1000 -m $USERNAME \
+  && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+  && chmod 0440 /etc/sudoers.d/$USERNAME
+
+USER coder
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
 CMD [ "sleep", "infinity" ]
