@@ -1,6 +1,9 @@
 {
   "name": "Smartbrain Devcontainer",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
   "features": {
     "ghcr.io/devcontainers/features/common-utils": {
       "username": "coder",
