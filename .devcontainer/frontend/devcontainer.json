@@ -10,13 +10,17 @@
       "version": "17"
     }
   },
+  "containerEnv": {
+    "NODE_ENV": "local",
+    "DEVCONTAINER": "true"
+  },
   "forwardPorts": [3000, "backend-db:5432"],
   "portsAttributes": {
     "3000": {
       "label": "Smartbrain Frontend",
       "onAutoForward": "openBrowserOnce"
     },
-    "backend:3001":{
+    "backend:3001": {
       "label": "Smartbrain Backend"
     },
     "backend-db:5432": {
@@ -26,9 +30,7 @@
   "shutdownAction": "none",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "vscodevim.vim"
-      ]
+      "extensions": ["vscodevim.vim"]
     }
   }
 }

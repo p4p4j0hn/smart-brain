@@ -10,6 +10,10 @@
       "version": "17"
     }
   },
+  "containerEnv": {
+    "NODE_ENV": "local",
+    "DEVCONTAINER": "true"
+  },
   "forwardPorts": [3001],
   "portsAttributes": {
     "frontend:3000": {
@@ -29,9 +33,7 @@
       "settings": {
         "remote.autoForwardPorts": false
       },
-      "extensions": [
-        "vscodevim.vim"
-      ]
+      "extensions": ["vscodevim.vim"]
     }
   }
 }
