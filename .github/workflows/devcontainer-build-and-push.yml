@@ -27,7 +27,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           subFolder: .github
-          configFile: .devcontainer/base/devcontainer.json
+          configFile: .github/.devcontainer/base/devcontainer.json
           imageName: ghcr.io/${{ github.repository }}-base
           cacheFrom: ghcr.io/${{ github.repository }}
           push: always
@@ -35,7 +35,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           subFolder: .github
-          configFile: .devcontainer/dind/devcontainer.json
+          configFile: .github/.devcontainer/dind/devcontainer.json
           imageName: ghcr.io/${{ github.repository }}-dind
           cacheFrom: ghcr.io/${{ github.repository }}
           push: always
