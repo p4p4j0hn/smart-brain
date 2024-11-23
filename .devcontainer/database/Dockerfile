@@ -1,7 +1,7 @@
 FROM postgres:17
 
-COPY ./database/init-db.sql /docker-entrypoint-initdb.d/
-RUN chown postgres:postgres /docker-entrypoint-initdb.d/init-db.sql
+COPY ./database/* /docker-entrypoint-initdb.d/
+RUN chown -R postgres:postgres /docker-entrypoint-initdb.d
 
 USER postgres
 ENTRYPOINT ["docker-entrypoint.sh"]
