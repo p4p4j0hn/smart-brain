@@ -3,13 +3,6 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "frontend",
   "workspaceFolder": "/workspaces/frontend",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils": {},
-    "ghcr.io/devcontainers-community/npm-features/prettier": {},
-    "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
-      "version": "17"
-    }
-  },
   "containerEnv": {
     "NODE_ENV": "local",
     "DEVCONTAINER": "true"
