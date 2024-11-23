@@ -1,0 +1,40 @@
+{
+  "name": "Smartbrain Devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {
+      "username": "coder",
+      "userUid": "1000",
+      "userGid": "1000"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22",
+      "additionalVersions": "20"
+    },
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-extra/features/prettier": {},
+    "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers-extra/features/starship:1": {},
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {}
+  },
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/git",
+    "ghcr.io/devcontainers/features/node",
+    "ghcr.io/devcontainers/features/sshd",
+    "ghcr.io/devcontainers-extra/features/prettier",
+    "ghcr.io/robbert229/devcontainer-features/postgresql-client",
+    "ghcr.io/devcontainers-extra/features/starship",
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew"
+  ],
+  "remoteUser": "coder",
+  "containerUser": "coder"
+}
