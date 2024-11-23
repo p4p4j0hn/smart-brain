@@ -25,9 +25,15 @@
     "ghcr.io/devcontainers-extra/features/npm-package:1": {
       "package": "eslint"
     },
-    "ghcr.io/devcontainers-extra/features/neovim-homebrew:1": {},
-    "ghcr.io/devcontainers-extra/features/tmux-homebrew:1": {},
-    "ghcr.io/georgofenbeck/features/lazygit-homebrew:1": {},
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "neovim"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "tmux"
+    },
+    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+      "package": "lazygit"
+    },
     "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
       "package": "vcsh"
     },
