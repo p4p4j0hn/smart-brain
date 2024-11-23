@@ -3,16 +3,32 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "frontend",
   "workspaceFolder": "/workspaces/frontend",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {},
+    "ghcr.io/devcontainers-community/npm-features/prettier": {},
+    "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
+      "version": "17"
+    }
+  },
   "forwardPorts": [3000, "backend-db:5432"],
   "portsAttributes": {
     "3000": {
       "label": "Smartbrain Frontend",
       "onAutoForward": "openBrowserOnce"
     },
+    "backend:3001":{
+      "label": "Smartbrain Backend"
+    },
     "backend-db:5432": {
       "label": "Smartbrain Database"
     }
   },
   "shutdownAction": "none",
-  "postCreateCommand": "yarn install"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscodevim.vim"
+      ]
+    }
+  }
 }

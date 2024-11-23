@@ -4,10 +4,34 @@
   "service": "backend",
   "workspaceFolder": "/workspaces/backend",
   "features": {
+    "ghcr.io/devcontainers/features/common-utils": {},
+    "ghcr.io/devcontainers-extra/features/prettier": {},
     "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
       "version": "17"
     }
   },
+  "forwardPorts": [3001],
+  "portsAttributes": {
+    "frontend:3000": {
+      "label": "Smartbrain Frontend",
+      "onAutoForward": "openBrowserOnce"
+    },
+    "3001": {
+      "label": "Smartbrain Backend"
+    },
+    "backend-db:5432": {
+      "label": "Smartbrain Database"
+    }
+  },
   "shutdownAction": "none",
-  "postCreateCommand": "yarn install"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "remote.autoForwardPorts": false
+      },
+      "extensions": [
+        "vscodevim.vim"
+      ]
+    }
+  }
 }
