@@ -3,7 +3,16 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "frontend",
   "workspaceFolder": "/workspaces/frontend",
-  "forwardPorts": [3000, 5432],
+  "forwardPorts": [3000, "backend-db:5432"],
+  "portsAttributes": {
+    "3000": {
+      "label": "Smartbrain Frontend",
+      "onAutoForward": "openBrowserOnce"
+    },
+    "backend-db:5432": {
+      "label": "Smartbrain Database"
+    }
+  },
   "shutdownAction": "none",
   "postCreateCommand": "yarn install"
 }

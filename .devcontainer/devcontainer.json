@@ -1,17 +1,33 @@
 {
   "name": "Smartbrain Dev",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": "false"
+    },
     "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
       "version": "17"
-    }
-  },
-  "postCreateCommand": {
-    "install_global_npm_packages": "npm install -g @devcontainers/cli prettier eslint"
+    },
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-extra/features/npm-package:1": [
+      "typescript": {},
+      "@devcontainers/cli": {},
+      "eslint": {},
+      "prettier": {}
+    ]
   },
   "containerEnv": {
     "DEVCONTAINER": "true"
   },
-  "forwardPorts": [3000, 5432]
+  "forwardPorts": [3000, 5432],
+  "portsAttributes": {
+    "3000": {
+      "label": "Smartbrain Frontend",
+      "onAutoForward": "openBrowserOnce"
+    },
+    "5432": {
+      "label": "Smartbrain Database"
+    }
+  }
 }
