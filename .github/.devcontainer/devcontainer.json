@@ -24,8 +24,7 @@
       "version": "17"
     },
     "ghcr.io/devcontainers-extra/features/starship:1": {},
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {}
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
   },
   "overrideFeatureInstallOrder": [
     "ghcr.io/devcontainers/features/common-utils",
