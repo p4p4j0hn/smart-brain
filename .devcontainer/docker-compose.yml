@@ -16,7 +16,7 @@ services:
     networks:
       - smartbrain
     ports:
-      - "127.0.0.1:3000:3000"
+      - "3000:3000"
     working_dir: /workspaces/frontend
     depends_on:
       - backend
@@ -37,7 +37,7 @@ services:
     networks:
       - smartbrain
     ports:
-      - "127.0.0.1:3001:3001"
+      - "3001:3001"
     working_dir: /workspaces/backend
     depends_on:
       - backend-db
@@ -57,7 +57,7 @@ services:
     networks:
       - smartbrain
     ports:
-      - "127.0.0.1:5432:5432"
+      - "5432:5432"
 
 volumes:
   postgres-data:

@@ -1,31 +1,18 @@
 {
   "name": "Smartbrain Dev",
-  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {
-      "moby": "false"
-    },
-    "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
-      "version": "17"
-    },
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers-extra/features/npm-package:1": [
-      "typescript": {},
-      "@devcontainers/cli": {},
-      "eslint": {},
-      "prettier": {}
-    ]
-  },
+  "image": "ghcr.io/p4p4j0hn/smart-brain-dind:latest",
   "containerEnv": {
     "DEVCONTAINER": "true"
   },
-  "forwardPorts": [3000, 5432],
+  "forwardPorts": [3000, 3001, 5432],
   "portsAttributes": {
     "3000": {
       "label": "Smartbrain Frontend",
       "onAutoForward": "openBrowserOnce"
     },
+    "3001": {
+      "label": "Smartbrain Backend"
+    }
     "5432": {
       "label": "Smartbrain Database"
     }
