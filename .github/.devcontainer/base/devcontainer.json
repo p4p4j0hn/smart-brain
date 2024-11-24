@@ -18,7 +18,7 @@
     "ghcr.io/devcontainers-extra/features/starship:1": {},
     "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
     "./local-features/devcontainer-cli": {},
-    ".local-features/my-homebrew": {
+    "./local-features/my-homebrew": {
       "packages": "neovim,tmux,lazygit,vcsh,myrepos,smug,luarocks,ruby,atuin,bat,direnv,dysk,eza,fd,rg,shellcheck,tealdeer,trash-cli,yq,zoxide,git-flow,glab,tea,gh"
     }
   },
