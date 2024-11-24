@@ -1,0 +1,14 @@
+services:
+  smart-brain-devpod:
+    image: ghcr.io/p4p4j0hn/smart-brain-dind:latest
+    privileged: true
+    init: true
+    ports:
+      - "127.0.0.1:2222:2222"
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3001:3001"
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - ..:/workspaces:z,cached
+    working_dir: /workspaces
+    command: sleep infinity

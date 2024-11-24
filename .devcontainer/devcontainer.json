@@ -1,11 +1,16 @@
 {
   "name": "Smartbrain Dev",
-  "image": "ghcr.io/p4p4j0hn/smart-brain-dind:latest",
+  "dockerComposeFile": "docker-compose.base.yml",
+  "service": "smart-brain-devpod",
   "containerEnv": {
     "DEVCONTAINER": "true"
   },
-  "forwardPorts": [3000, 3001, 5432],
+  "workspaceFolder": "/workspaces",
+  "forwardPorts": [2222, 3000, 3001, 5432],
   "portsAttributes": {
+    "2222": {
+      "label": "SSH port"
+    },
     "3000": {
       "label": "Smartbrain Frontend",
       "onAutoForward": "openBrowserOnce"
