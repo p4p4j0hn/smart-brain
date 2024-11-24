@@ -17,86 +17,9 @@
     },
     "ghcr.io/devcontainers-extra/features/starship:1": {},
     "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
-    "ghcr.io/devcontainers-extra/features/npm-package:1": {
-      "package": "@devcontainers/cli"
-    },
-    "ghcr.io/devcontainers-extra/features/npm-package:1": {
-      "package": "eslint"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "neovim"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "tmux"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "lazygit"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "vcsh"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "myrepos"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "smug"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "luarocks"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "ruby"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "atuin"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "bat"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "direnv"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "dysk"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "eza"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "fd"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "rg"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "shellcheck"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "tealdeer"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "trash-cli"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "eza"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "yq"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "zoxide"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "git-flow"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "glab"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "tea"
-    },
-    "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
-      "package": "gh"
+    "./local-features/devcontainer-cli": {},
+    ".local-features/my-homebrew": {
+      "packages": "neovim,tmux,lazygit,vcsh,myrepos,smug,luarocks,ruby,atuin,bat,direnv,dysk,eza,fd,rg,shellcheck,tealdeer,trash-cli,yq,zoxide,git-flow,glab,tea,gh"
     }
   },
   "overrideFeatureInstallOrder": [
