@@ -30,7 +30,7 @@ jobs:
           configFile: .github/.devcontainer/base/devcontainer.json
           imageName: ghcr.io/${{ github.repository }}-base
           cacheFrom: ghcr.io/${{ github.repository }}-base
-          runCmd: 'sudo echo ''eval "$(starship init bash)"'' | tee -a /etc/bash.bashrc'
+          runCmd: 'echo ''eval "$(starship init bash)"'' | sudo tee -a /etc/bash.bashrc'
           push: always
       - name: Pre-build dev container image
         uses: devcontainers/ci@v0.3
