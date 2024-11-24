@@ -1,0 +1,19 @@
+{
+  "id": "devcontainer-cli",
+  "version": "1.0.0",
+  "name": "devcontainer-cli (via npm)",
+  "documentationURL": "http://github.com/devcontainers-extra/features/tree/main/src/prettier",
+  "description": "Install devcontainer-cli.",
+  "options": {
+    "version": {
+      "default": "latest",
+      "description": "Select the version to install.",
+      "proposals": ["latest"],
+      "type": "string"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers-extra/features/npm-package",
+    "ghcr.io/devcontainers/features/node"
+  ]
+}
