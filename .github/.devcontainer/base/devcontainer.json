@@ -15,21 +15,16 @@
     "ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
       "version": "17"
     },
-    "ghcr.io/devcontainers-extra/features/starship:1": {},
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
-    "./local-features/devcontainer-cli": {},
-    "./local-features/my-homebrew": {
-      "packages": "neovim,tmux,lazygit,vcsh,myrepos,smug,luarocks,ruby,atuin,bat,direnv,dysk,eza,fd,rg,shellcheck,tealdeer,trash-cli,yq,zoxide,git-flow,glab,tea,gh"
-    }
+    "ghcr.io/devcontainers-extra/features/starship:1": {}
   },
   "overrideFeatureInstallOrder": [
     "ghcr.io/devcontainers/features/common-utils",
     "ghcr.io/devcontainers/features/node",
     "ghcr.io/devcontainers-extra/features/prettier",
     "ghcr.io/robbert229/devcontainer-features/postgresql-client",
-    "ghcr.io/devcontainers-extra/features/starship",
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew"
+    "ghcr.io/devcontainers-extra/features/starship"
   ],
+  "runCmd": "echo 'eval \"$(starship init bash)\"' >> /etc/bash.bashrc",
   "remoteUser": "coder",
   "containerUser": "coder"
 }
