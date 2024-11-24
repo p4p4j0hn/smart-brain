@@ -27,6 +27,9 @@ RUN apt-get update \
   && apt-get upgrade -y \
   && rm -rf /var/lib/apt/lists/*
 
+# Install bash-preexec
+RUN curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o /usr/share/bash-prexec
+
 # Default to bash shell
 ENV SHELL=/bin/bash \
   DOCKER_BUILDKIT=1
