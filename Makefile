@@ -17,7 +17,7 @@ shell_base:
 ssh_base:
 	@echo 'Sshing into base'
 	@devcontainer up --workspace-folder .
-	@ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null  -o ForwardAgent=yes -o RemoteForward="/run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra" -o StreamLocalBindUnlink=yes coder@localhost
+	@ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null  -o ForwardAgent=yes -o RemoteForward="/home/coder/.gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra" -o StreamLocalBindUnlink=yes coder@localhost
 
 .PHONY: dev_init
 dev_init: dev_init_frontend dev_init_backend
