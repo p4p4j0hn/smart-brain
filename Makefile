@@ -1,10 +1,10 @@
-.PHONY: dev_init_base
-dev_init_base:
+.PHONY: init_base
+init_base:
 	@echo 'Building base'
 	@devcontainer up --workspace-folder . --dotfiles-repository https://github.com/p4p4j0hn/dotfiles
 
-.PHONY: dev_start_base
-dev_start_base:
+.PHONY: start_base
+start_base:
 	@echo 'Starting base'
 	@devcontainer up --workspace-folder .
 
