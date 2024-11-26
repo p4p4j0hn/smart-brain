@@ -22,6 +22,7 @@ RUN apt-get update \
   curl \
   gettext \
   inotify-tools \
+  locales \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get update \
   && apt-get upgrade -y \
