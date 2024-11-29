@@ -1,0 +1,30 @@
+session: smart-brain
+root: .
+before_start:
+  - make dev_init
+env:
+  PROJECT_DIR: $(pwd)
+stop:
+  - cd $PROJECT_DIR && make dev_down
+windows:
+  - name: dev
+    root: .
+    commands:
+      - vim .
+  - name: frontend
+    root: ./frontend
+    commands:
+      - vim .
+  - name: backend
+    root: ./backend
+    commands:
+      - vim .
+  - name: monitor
+    root: .
+    panes:
+      - commands: []
+      - commands:
+          - make start_backend
+    commands:
+      - make start_frontend
+    layout: c0de,126x31,0,0[126x15,0,0{63x15,0,0,61,62x15,64,0,63},126x15,0,16,62]
