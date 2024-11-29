@@ -45,6 +45,10 @@ dev_up_backend:
 .PHONY: dev_up
 dev_up: dev_up_frontend dev_up_backend
 
+.PHONY: dev_down
+dev_down:
+	docker stop smartbrain_frontend smartbrain_backend smartbrain_db
+
 .PHONY: shell_backend
 shell_backend:
 	@echo 'Shelling into backend'
@@ -64,3 +68,15 @@ start_backend:
 start_frontend:
 	@echo 'Starting frontend node server'
 	@devcontainer exec --config .devcontainer/frontend/devcontainer.json --container-id smartbrain_frontend yarn start
+
+.PHONY: dev_db_build
+dev_db_build:
+	@echo 'Building backend-db container and starting'
+	@docker compose -f .devcontainer/docker-compose.yml up --build backend-db
+
+.PHONY: dev_db_destroy
+dev_db_destroy:
+	@echo 'Destroying dev db'
+	@docker stop smartbrain_db
+	@docker rm smartbrain_db
+	@docker volume rm devcontainer_postgres-data
