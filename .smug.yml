@@ -3,7 +3,7 @@ root: .
 before_start:
   - make dev_init
 env:
-  PROJECT_DIR: $(pwd)
+  PROJECT_DIR: "$(pwd)"
 stop:
   - cd $PROJECT_DIR && make dev_down
 windows:
@@ -25,6 +25,8 @@ windows:
       - commands: []
       - commands:
           - make start_backend
+      - commands:
+          - "docker logs -f smartbrain_db"
     commands:
       - make start_frontend
-    layout: c0de,126x31,0,0[126x15,0,0{63x15,0,0,61,62x15,64,0,63},126x15,0,16,62]
+    layout: ae71,126x31,0,0{63x31,0,0[63x15,0,0,42,63x15,0,16,45],62x31,64,0[62x15,64,0,43,62x15,64,16,44]}
